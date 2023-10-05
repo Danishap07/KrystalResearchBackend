@@ -1,8 +1,8 @@
 const { createTransport } = require('nodemailer')
 
 const contactUs = async (req, res) => {
-    console.log(req.body
-        )
+    // console.log(req.body
+    //     )
     const { name, email, message } = req.body;
     if (!name) {
         return res.status(400).json({ status: false, message: "Name is required." })
@@ -31,7 +31,7 @@ const contactUs = async (req, res) => {
     })
     // to: '<pavan.k@krystalresearch.com>, <info@krystalresearch.com>',
     await transport.sendMail({
-        from: `<info@krystalresearch.com>`,
+        from: `Krystal Research Solutions <info@krystalresearch.com>`,
         to: '<danishp.1999@gmail.com>',
         subject: "A visitor at krystal research sent you a message.",
         // text: "hello this is my first email from node.js.",
@@ -65,7 +65,7 @@ const contactUs = async (req, res) => {
     </div>`
     }).then(() => {
         res.status(201).json({ message: "Email sent successfully." })
-        console.log({ message: "Email sent successfully." })
+        // console.log({ message: "Email sent successfully." })
     }).catch(err => {
         console.log({ message: err })
     })
