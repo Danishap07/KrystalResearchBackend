@@ -32,7 +32,7 @@ const contactUs = async (req, res) => {
     // to: '<pavan.k@krystalresearch.com>, <info@krystalresearch.com>',
     await transport.sendMail({
         from: `Krystal Research Solutions <info@krystalresearch.com>`,
-        to: '<pavan.k@krystalresearch.com>, <info@krystalresearch.com>',
+        to: '<info@krystalresearch.com>',
         subject: "A visitor at krystal research sent you a message.",
         // text: "hello this is my first email from node.js.",
         html: `<div style="background:#ecf2fb">
