@@ -6,9 +6,9 @@ const app = express()
 const routes = require('./routes')
 
 app.use(express.json());
+app.use(cors(corsOptions));
 
 const port = process.env.PORT || 8800;
 app.use('/api', routes);
-app.use(cors(corsOptions));
 
 app.listen(port, () => console.log(`Server is listening at port: ${port}`))
